@@ -5,9 +5,9 @@ import traceback
 #logger
 from src.utils.Logger import Logger
 
-main = Blueprint('index_blueprint', __name__)
+api = Blueprint('index_blueprint', __name__)
 
-@main.route('/')
+@api.route('/')
 def index():
     try:
         Logger.add_to_log("info", "{} {}".format(request.method, request.path))
